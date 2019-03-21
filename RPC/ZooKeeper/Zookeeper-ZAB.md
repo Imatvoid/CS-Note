@@ -1,0 +1,4 @@
+## Zookeeper-ZAB
+
+> Zookeeper采用ZAB(Zookeeper Atomic Broadcast)协议来保证分布式数据一致性。ZAB并不是一种通用的分布式一致性算法,而是一种专为Zookeeper设计的崩溃可恢复的原子消息广播算法。ZAB协议包括两种基本模式:崩溃恢复模式和消息广播模式。崩溃恢复模式主要用来在集群启动过程,或者Leader服务器崩溃退出后进行新的Leader服务器的选举以及数据同步;消息广播模式主要用来进行事务请求的处理。
+
