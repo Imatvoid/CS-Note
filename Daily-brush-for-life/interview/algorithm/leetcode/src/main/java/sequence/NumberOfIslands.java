@@ -1,3 +1,5 @@
+package sequence;
+
 class NumberOfIslands {
 
 

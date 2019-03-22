@@ -1,3 +1,5 @@
+package sequence;
+
 class RobotReturnToOrigin {
 
     public boolean judgeCircle(String moves) {

@@ -1,2 +1,4 @@
+package sequence;
+
 class MajorityElement {
 }

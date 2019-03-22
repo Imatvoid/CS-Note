@@ -1,3 +1,5 @@
+package sequence;
+
 import java.util.ArrayList;
 import java.util.List;
 

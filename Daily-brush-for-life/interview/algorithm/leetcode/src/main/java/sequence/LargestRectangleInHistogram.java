@@ -1,3 +1,5 @@
+package sequence;
+
 public class LargestRectangleInHistogram {
 
 

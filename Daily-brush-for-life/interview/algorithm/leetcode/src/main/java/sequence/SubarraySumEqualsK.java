@@ -1,3 +1,5 @@
+package sequence;
+
 import java.util.HashMap;
 
 public class SubarraySumEqualsK {

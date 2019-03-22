@@ -1,3 +1,5 @@
+package sequence;
+
 class SearchInRotatedSortedArrayII {
 
     public boolean search(int[] nums, int target) {
