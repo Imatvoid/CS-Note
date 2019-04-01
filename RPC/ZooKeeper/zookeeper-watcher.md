@@ -5,4 +5,12 @@
 ![](assets/ZooKeeper-watcher_images/4bfe78fe.png)
 
 
+watcher都是一次性的，可以通过第三方包实现永久性的watcher
+
+
+### watcher 事件类型
+
+NodeCreated 创建
+
+
 https://www.cnblogs.com/takumicx/p/9508706.html

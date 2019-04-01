@@ -36,7 +36,7 @@ numChildren  子节点个数
 ### get 获取数据
 
 
-
+### exist
 
 
 
@@ -61,7 +61,7 @@ stat path [watch]
 	printwatches on|off
 	
 
-	delete path [version]
+###	delete path [version]
 	
 	sync path
 	
@@ -87,3 +87,15 @@ stat path [watch]
 	close
 	
 	connect host:port
+	
+### watcher专题
+
+ls path [watch]
+
+ls2 path [watch]
+
+get path [watch]
+
+
+
+	
