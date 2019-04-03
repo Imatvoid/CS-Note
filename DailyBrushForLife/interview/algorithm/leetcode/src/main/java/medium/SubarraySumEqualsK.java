@@ -1,4 +1,4 @@
-package sequence;
+package medium;
 
 import java.util.HashMap;
 

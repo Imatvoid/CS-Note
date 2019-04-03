@@ -1,6 +1,4 @@
-package sequence;
-
-import java.util.Arrays;
+package medium;
 
 public class KthLargestElementInAnArray {
 
