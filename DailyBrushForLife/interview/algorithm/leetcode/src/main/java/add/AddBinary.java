@@ -1,4 +1,4 @@
-package easy;
+package add;
 
 public class AddBinary {
 
