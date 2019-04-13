@@ -6,7 +6,7 @@ tags:
 - string
 - string-multiply
 
-熟练度
+熟练度+1
 
 #### 描述
 
