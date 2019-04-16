@@ -1,4 +1,4 @@
-package tree.Traversal;
+package tree.traversal;
 
 import java.util.*;
 

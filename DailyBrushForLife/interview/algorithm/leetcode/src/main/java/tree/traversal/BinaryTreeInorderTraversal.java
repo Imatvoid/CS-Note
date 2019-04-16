@@ -1,6 +1,7 @@
-package tree.Traversal;
+package tree.traversal;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -45,22 +46,54 @@ public class BinaryTreeInorderTraversal {
      * @return
      */
     public List<Integer> inorderTraversal2(TreeNode root) {
-
         List<Integer> list = new ArrayList<Integer>();
+        if(root == null){
+            return list;
+        }
 
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        TreeNode cur = root;
-
-        while(cur!=null || !stack.empty()){
-            // cur 不为null的情况
-            while(cur!=null){
+        stack.add(root);
+        while(!stack.empty()){
+            TreeNode cur = stack.pop();
+            // 一直走到最左端，直到left为null
+            while (cur != null) {
                 stack.add(cur);
                 cur = cur.left;
             }
-            // stack
-            cur = stack.pop();
-            list.add(cur.val);
-            cur = cur.right;
+            if(stack.size()>0){
+                cur = stack.pop();
+            }
+            if (cur != null) {
+                list.add(cur.val);
+                stack.add(cur.right);
+            }
+        }
+
+        return list;
+    }
+
+    public List<Integer> inorderTraversal3(TreeNode root) {
+        List<Integer> list = new ArrayList<Integer>();
+        if(root == null){
+            return list;
+        }
+
+        LinkedList<TreeNode> stack = new LinkedList<TreeNode>();
+        stack.add(root);
+        while(!stack.isEmpty()){
+            TreeNode cur = stack.pop();
+            // 一直走到最左端，直到left为null
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            }
+
+            cur = stack.poll();
+
+            if (cur != null) {
+                list.add(cur.val);
+                stack.push(cur.right);
+            }
         }
 
         return list;
