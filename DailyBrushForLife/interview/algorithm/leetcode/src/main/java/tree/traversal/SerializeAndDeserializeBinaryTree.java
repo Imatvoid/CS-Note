@@ -1,19 +1,13 @@
 package tree.traversal;
 
+import tree.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class SerializeAndDeserializeBinaryTree {
 
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
 
     /**

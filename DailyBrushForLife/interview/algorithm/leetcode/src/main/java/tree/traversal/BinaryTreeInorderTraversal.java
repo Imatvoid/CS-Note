@@ -1,5 +1,7 @@
 package tree.traversal;
 
+import tree.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -7,15 +9,7 @@ import java.util.Stack;
 
 public class BinaryTreeInorderTraversal {
 
-    public static  class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     /**
      * 递归
