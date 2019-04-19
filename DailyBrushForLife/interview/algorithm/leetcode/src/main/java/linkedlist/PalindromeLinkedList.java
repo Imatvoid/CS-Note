@@ -6,11 +6,6 @@ import java.io.InputStreamReader;
 
 public class PalindromeLinkedList {
 
-    public static class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) { val = x; }
-  }
 
 
     /**

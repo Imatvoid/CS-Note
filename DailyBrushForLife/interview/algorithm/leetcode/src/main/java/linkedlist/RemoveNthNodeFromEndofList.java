@@ -2,14 +2,6 @@ package linkedlist;
 
 public class RemoveNthNodeFromEndofList {
 
-     class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     /**
      * 移除链表的倒数第K个节点

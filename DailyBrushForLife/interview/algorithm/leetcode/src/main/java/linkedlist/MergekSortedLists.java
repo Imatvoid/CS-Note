@@ -7,14 +7,6 @@ import java.util.TreeMap;
 
 public class MergekSortedLists {
 
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public ListNode mergeKLists2(ListNode[] lists) {
 

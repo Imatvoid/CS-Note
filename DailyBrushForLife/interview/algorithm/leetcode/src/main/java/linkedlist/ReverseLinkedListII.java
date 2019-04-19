@@ -6,11 +6,6 @@ import java.io.InputStreamReader;
 
 public class ReverseLinkedListII {
 
-    public static  class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) { val = x; }
-  }
 
     public ListNode reverseBetween(ListNode head, int m, int n) {
 
