@@ -1,4 +1,0 @@
-package medium;
-
-class MajorityElement {
-}
