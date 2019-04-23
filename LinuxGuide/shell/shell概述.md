@@ -2,7 +2,7 @@
 
 
 
-
+### shell
 
 #### Bourne shell（/bin/sh）
 
@@ -28,3 +28,18 @@ Linux 操作系统缺省的 shell 是Bourne Again shell，它是 Bourne shell �
 向前兼容就是 ， 使用了新接口的应用，运行在旧的系统上。系统对于未定义的接口，他不认为是错误的，而是不处理，也就是 “忽略掉早期版本中未实现的功能”
 
 #### Z shell
+
+
+
+
+
+
+
+### 交互/非交互 登陆/非登陆 shell
+
+<http://smilejay.com/2012/10/interactive-shell-login-shell/>
+
+
+
+
+

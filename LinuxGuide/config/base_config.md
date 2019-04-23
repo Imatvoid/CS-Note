@@ -10,9 +10,10 @@
 ~/.bashrc: 该文件包含专用于你的bash shell的bash信息,当登录时以及每次打开新的shell时,该该文件被读取.
 
 ~/.bash_logout: 当每次退出系统(退出bash shell)时,执行该文件.
- 
+
 另外,/etc/profile中设定的变量(全局)的可以作用于任何用户,而~/.bashrc等中设定的变量(局部)只能继承/etc/profile中的变量,他们是"父子"关系.
 
 
 
 https://www.cnblogs.com/kevingrace/p/8072860.html
+
