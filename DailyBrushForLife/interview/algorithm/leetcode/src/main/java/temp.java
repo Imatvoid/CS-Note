@@ -126,9 +126,41 @@ public class temp {
     }
 
 
-    public static void main(String[] args) {
 
-        new temp().isMatch("a","ab*a");
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        int n =numCourses;
+        if(n==1){
+            return  true;
+        }
+        HashMap<Integer,List<Integer>> map =new HashMap<Integer,List<Integer>>();
+
+
+        for (int i = 0; i <prerequisites.length ; i++) {
+           int [] pre  = prerequisites[i];
+           map.put(pre[0],new ArrayList<>());
+
+            for (int j = 1; j <pre.length ; j++) {
+                map.get(pre[0]).add(pre[j]);
+
+            }
+
+        }
+        for (int i = 0; i <prerequisites.length ; i++) {
+            int [] pre  = prerequisites[i];
+            for (int j = 1; j < pre.length; j++) {
+                if (map.get(pre[j]) != null && map.get(pre[j]).contains(pre[0])) {
+                    return false;
+                }
+
+            }
+        }
+          return  true;
+
+    }
+
+        public static void main(String[] args) {
+
+       new temp().canFinish(2,new int[][]{{1,0}});
 
 //        new temp().trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1});
 //
