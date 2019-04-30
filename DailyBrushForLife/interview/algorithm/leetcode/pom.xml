@@ -7,8 +7,13 @@
     <groupId>com.learn</groupId>
     <artifactId>leetcode</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-
+    <dependencies>
+        <dependency>
+            <groupId>com.jdwl.eclp</groupId>
+            <artifactId>eclp-so-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

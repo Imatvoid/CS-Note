@@ -19,7 +19,7 @@ tar(选项)(参数)
 ### 选项
 
 ```
--A或--catenate：新增文件到以存在的备份文件；
+-A或--catenate：新增文件到以存在的备份文件；  合并多个 jar
 -B：设置区块大小；
 -c或--create：建立新的备份文件；
 -C <目录>：这个选项用在解压缩，若要在特定目录解压缩，可以使用这个选项。
@@ -31,7 +31,7 @@ tar(选项)(参数)
 -f<备份文件>或--file=<备份文件>：指定备份文件；
 -v或--verbose：显示指令执行过程；
 -r：添加文件到已经压缩的文件；
--u：添加改变了和现有的文件到已经存在的压缩文件；
+-u：添加改变了和现有的文件到已经存在的压缩文件；时间戳相同，则什么都不会发生
 -j：支持bzip2解压文件；
 -v：显示操作过程；
 -l：文件系统边界设置；
@@ -54,8 +54,11 @@ tar(选项)(参数)
 - z：有gzip属性的
 - j：有bz2属性的
 - Z：有compress属性的
-- v：显示所有过程
+- v：显示所有过程  verbose
+- c：--create
 - O：将文件解开到标准输出
+- t或--list：列出备份文件的内容；
+- u：添加改变了和现有的文件到已经存在的压缩文件；时间戳相同，则什么都不会发生
 ```
 
 下面的参数-f是必须的
@@ -77,6 +80,9 @@ tar -tf all.tar
 tar -cfv archive.tar foo bar  # 从文件foo和bar创建archive.tar。
 tar -tvf archive.tar         # 详细列出archive.tar中的所有文件。
 tar -xf archive.tar          # 从archive.tar提取所有文件。
+
+# 从jar包删除文件
+tar -f archive.tar --delete file1 file2 ..
 ```
 
 #### zip格式
