@@ -1,4 +1,4 @@
-package binsearch;
+package dp;
 
 import java.util.Arrays;
 

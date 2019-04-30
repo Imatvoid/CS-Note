@@ -6,6 +6,8 @@ public class temp {
 
 
     public int[][] merge(int[][] intervals) {
+
+
         if (intervals == null || intervals.length == 0 || intervals[0] == null || intervals[0].length == 0)
             return new int[][]{};
 
@@ -127,14 +129,11 @@ public class temp {
 
 
 
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
 
-
-    }
 
         public static void main(String[] args) {
 
-       new temp().canFinish(2,new int[][]{{1,0}});
+
 
 //        new temp().trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1});
 //
