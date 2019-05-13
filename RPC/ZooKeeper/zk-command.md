@@ -1,6 +1,24 @@
-## zk 命令行
+# zk 命令行
+
+## 常见命令
+
+
 
 ### zkCli.sh
+
+```
+$sh bin/zkServer.sh start   启动ZK服务 
+$sh bin/zkServer.sh status  查看ZK服务状态
+$sh bin/zkServer.sh stop    停止ZK服务
+$sh bin/zkServer.sh restart 重启ZK服务
+
+$sh bin/zkCli.sh -server 127.0.0.1:2181 连接到本机
+
+```
+
+https://blog.csdn.net/u012152619/article/details/52931409
+
+
 
 
 ### ls 与 ls2
@@ -59,21 +77,22 @@ stat path [watch]
 	redo cmdno
 	
 	printwatches on|off
-	
+
 
 ###	delete path [version]
-	
+
 	sync path
-	
-	
-	listquota path
-	
+
+
+​	
+​	listquota path
+​	
 	rmr path
 	
 	get path [watch]
-	
+
 ###	create [-s] [-e] path data acl
-	
+
 	-e  临时节点  
 	
 	-s  顺序节点
@@ -87,7 +106,7 @@ stat path [watch]
 	close
 	
 	connect host:port
-	
+
 ### watcher专题
 
 ls path [watch]
@@ -98,4 +117,4 @@ get path [watch]
 
 
 
-	
+​	
