@@ -1,3 +1,8 @@
-# leetcode 题目解法
+# 等待
 
-35. Search Insert Position 查找插入位置
+
+
+spring中用了那些设计模式
+
+如何分库分表
+
