@@ -1,4 +1,4 @@
-package medium;
+package sort;
 
 public class KthLargestElementInAnArray {
 
