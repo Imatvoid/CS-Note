@@ -1,18 +1,35 @@
 package summary.sort;
 
+import java.util.Stack;
+
 public class QuickSort {
 
     /**
-     * 递归版本
+     * 非递归版本
      *
      * @param arr
      * @param start
      * @param end
      */
     public static void quickSortNoRecursion(int[] arr, int start, int end) {
+        Stack<int[]> stack = new Stack<>();
+        stack.push(new int[]{start, end});
+        while (!stack.isEmpty()) {
+            int[] index = stack.pop();
+            int pivotIndex = partition(arr, index[0], index[1]);
+
+            // 这里两个条件判断
+            if (index[0] < pivotIndex - 1) {
+                stack.push(new int[]{index[0], pivotIndex - 1});
+            }
+            if (pivotIndex + 1 < index[1]) {
+                stack.push(new int[]{pivotIndex + 1, index[1]});
+            }
+        }
+
+
 
     }
-
 
     /**
      * 递归版本

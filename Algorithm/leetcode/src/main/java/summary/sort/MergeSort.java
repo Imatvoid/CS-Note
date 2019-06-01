@@ -1,49 +1,21 @@
-## 归并排序
+package summary.sort;
 
+public class MergeSort {
 
-
-## 思路
-
-归并排序（MERGE-SORT）是利用**归并**的思想实现的排序方法，该算法采用经典的**分治**（divide-and-conquer）策略（分治法将问题**分**(divide)成一些小的问题然后递归求解，而**治(conquer)**的阶段则将分的阶段得到的各答案"修补"在一起，即分而治之)。
-
-![image-20190530115600789](归并排序/image-20190530115600789.png)
-
-![image-20190530160449181](归并排序/image-20190530160449181.png)
-
-
-
-## 实现
-
-```java
-class MergeSort {
-
+    public static  int[] sortArray(int[] nums) {
+        int [] tmp = new int[nums.length];
+        mergeSortNoRecursion(nums,0,nums.length-1,tmp);
+        return nums;
+    }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 14, 5869, 2, -1, 88, 9, 9, 3};
-        int[] temp = new int[nums.length];
-        new MergeSort().mergeSort(nums, 0, nums.length - 1, temp);
-
-        // break point
-        System.out.print("");
-
+        int [] tmp = new  int[]{
+                5,1,1,2,0,0};
+        sortArray(tmp);
     }
 
-    void mergeSort(int[] nums, int start, int end, int[] temp) {
-        if (start < end) {
-            int mid = start + (end - start) / 2;
-            // 先分
-            mergeSort(nums, start, mid, temp);
-            mergeSort(nums, mid + 1, end, temp);
-            
-            //然后合并
-            mergeArray(nums, start, mid, end, temp);
 
-        }
-
-
-    }
-  
-  public static void mergeSortNoRecursion(int[] arr, int start, int end, int[] temp)    {
+    public static void mergeSortNoRecursion(int[] arr, int start, int end, int[] temp)    {
 
 
         // 从 1开始分割，与递归不同的是，递归由数组长度一分为二最后到1，
@@ -60,6 +32,7 @@ class MergeSort {
                 // 防止超出数组长度
                 if (right > arr.length - 1)
                     right = arr.length - 1;
+
                 // 合并排序相同
                 mergeArray(arr, left, mid, right, temp);
             }
@@ -99,5 +72,3 @@ class MergeSort {
 
     }
 }
-```
-
