@@ -20,11 +20,11 @@
 |      |                                                              |        |                             |        |
 |      |                                                              |        |                             |        |
 | DP   |                                                              |        |                             |        |
-| 120  | Triangle(三角形最小路径和)                                   | medium | Triangle                    | +1     |
+| 120  | Triangle(三角形最小路径和)                                   | leetcode.medium | Triangle                    | +1     |
 |      |                                                              |        |                             |        |
 | 贪心 |                                                              |        |                             |        |
-| 121. | Best Time to Buy and Sell Stock(买卖股票一次)                | easy   | BestTimeToBuyAndSellStock   | +1.5   |
-| 122. | Best Time to Buy and Sell Stock II(买卖股票多次,多个交易不能并行) | easy   | BestTimeToBuyAndSellStockII | +1     |
+| 121. | Best Time to Buy and Sell Stock(买卖股票一次)                | leetcode.easy   | BestTimeToBuyAndSellStock   | +1.5   |
+| 122. | Best Time to Buy and Sell Stock II(买卖股票多次,多个交易不能并行) | leetcode.easy   | BestTimeToBuyAndSellStockII | +1     |
 |      |                                                              |        |                             |        |
 |      |                                                              |        |                             |        |
 

@@ -56,7 +56,7 @@ class Solution {
 //             list.add(new MyInteger(i));
 
 //         }
-//         Collections.sort(list);
+//         Collections.leetcode.sort(list);
 
 
 //         ArrayList<Integer> res = new ArrayList<Integer>();

@@ -12,7 +12,7 @@ public class temp {
             return new int[][]{};
 
         Arrays.sort(intervals, (o1, o2) -> o1[0] - o2[0]);
-//        Arrays.sort(intervals, new Comparator<int[]>() {
+//        Arrays.leetcode.sort(intervals, new Comparator<int[]>() {
 //            @Override
 //            public int compare(int[] a1, int[] a2) {
 //                return a1[0] - a2[0];
@@ -167,4 +167,6 @@ public class temp {
 
 
     }
+
+
 }

@@ -1,4 +1,4 @@
-func lengthOfLongestSubstring(s string) int {
+func lengthOfLongestSubstring(s leetcode.string) int {
     lastOccurIndex := make(map[byte]int)
 	start := 0
 	maxLength := 0
