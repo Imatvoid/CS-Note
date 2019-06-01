@@ -2,7 +2,7 @@
 
 > 最长不重复的字串
 >
-> Given a string, find the length of the **longest substring** without repeating characters.
+> Given a leetcode.string, find the length of the **longest substring** without repeating characters.
 >
 > **Example 1:**
 >
