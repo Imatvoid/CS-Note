@@ -68,6 +68,7 @@ public class IntersectionOfTwoLinkedLists {
     public ListNode getIntersectionNodeBest(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) return null;
         ListNode a = headA, b = headB;
+        // 如果没有交点,会一起等于null跳出来
         while (a != b) {
             a = (a != null) ? a.next : headB;
             b = (b != null) ? b.next : headA;

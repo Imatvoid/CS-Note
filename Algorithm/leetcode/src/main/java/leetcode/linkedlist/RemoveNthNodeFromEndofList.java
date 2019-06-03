@@ -19,24 +19,25 @@ public class RemoveNthNodeFromEndofList {
         // consider remove the origin head
         ListNode p = new ListNode(-1);
         p.next = head;
-        head = p;
 
-        ListNode head1 = head;
-        ListNode head2 = head;
+        // early 和 last 之间相差n个距离,当early到达null,last到达倒数第n个节点
+        // 1-2-3-4-5 n=2
+        ListNode earlyStart = p;
+        ListNode lastStart = p;
 
         ListNode pre = null;
-        int k = 1;
-        while (head1 != null) {
-            head1 = head1.next;
+        int k = 0;
+        while (earlyStart != null) {
+            earlyStart = earlyStart.next;
             k++;
-            if (k > n + 1) {
-                pre = head2;
-                head2 = head2.next;
+            if (k > n) {
+                pre = lastStart;
+                lastStart = lastStart.next;
             }
 
         }
         // find
-        pre.next = head2.next;
+        pre.next = lastStart.next;
         return p.next;
 
     }

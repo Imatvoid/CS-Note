@@ -3,32 +3,51 @@ package leetcode.linkedlist;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
 
-import static leetcode.linkedlist.LinkedListUtils.findK;
 import static leetcode.linkedlist.LinkedListUtils.reverse;
 
-public class ReverseLinkedListII {
-
-    public ListNode reverseBetween(ListNode head, int m, int n) {
-
-        ListNode res = new ListNode(1);
-        res.next = head;
-
-        ListNode pre = findK(res, m);
-        ListNode mNode = pre.next;
-
-        ListNode nNode = findK(res, n+1);
-        ListNode tail = nNode.next;
-        nNode.next = null;
+public class ReorderList {
 
 
-        pre.next = reverse(mNode);
-        findK(pre.next,n-m+1).next=tail;
+    public void reorderList(ListNode head) {
+        if (head == null || head.next == null) return;
 
-        return  res.next;
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        // 1-2-3(slow)-4-null(fast)
+        // 1-2(slow)-3(fast)
+        // 1-2(slow)-null(fast)
+        ListNode n2 = slow.next;
+        n2 = reverse(n2);
+        // 这一步切分成两条链表
+        slow.next=null;
+        combine(head,n2);
+
+    }
+
+    public void combine(ListNode head,ListNode tail) {
+        if(tail==null) return;
+
+        ListNode pre = new ListNode(-1);
+        while (head!=null&&tail!=null){
+            pre.next=head;
+            head=head.next;
+            pre.next.next=tail;
+            pre=tail;
+            tail=tail.next;
+
+        }
+        pre.next = head;
 
 
     }
+
 
 
 
@@ -80,16 +99,12 @@ public class ReverseLinkedListII {
         String line;
         while ((line = in.readLine()) != null) {
             ListNode head = stringToListNode(line);
-            line = in.readLine();
-            int m = Integer.parseInt(line);
-            line = in.readLine();
-            int n = Integer.parseInt(line);
 
-            ListNode ret = new ReverseLinkedListII().reverseBetween(head, m, n);
-
-            String out = listNodeToString(ret);
+            new ReorderList().reorderList(head);
+            String out = listNodeToString(head);
 
             System.out.print(out);
         }
     }
+
 }

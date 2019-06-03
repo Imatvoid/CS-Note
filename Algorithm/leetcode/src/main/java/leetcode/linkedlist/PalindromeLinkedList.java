@@ -16,33 +16,29 @@ public class PalindromeLinkedList {
     public boolean isPalindrome(ListNode head) {
         // 通常需要考虑的因素是0和1的情况
         if(head == null || head.next == null){
-            return  false;
+            return  true;
         }
         ListNode fast = head;
         ListNode slow = head;
-        ListNode pre = head;
-        int count = 0;
-        //寻找中间节点    1 2 3 则为1  1 2 3 4  也为2
+
+        // 寻找中间节点
+        // 1-2 slow=2 fast=null
+        // 1-2-3 slow=2 fast=3
+        // 1-2-3-4 slow=3 fast=null
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-            count++;
         }
 
 
-//        //寻找中间节点    1 2 3 则为2  1 2 3 4  也为2
-//        while (fast!=null ){
-//            fast = (fast.next==null)?null:fast.next.next;
-//            slow = slow.next;
-//            count++;
-//        }
-
-        // 倒转中间后边的链表
+        // 倒转中间后边的链表 但是没有切换前面的指向
         slow = reverseLinkedList(slow);
+        // 最后要恢复
+        ListNode save = slow;
 
         fast = head;
-        ListNode save = slow;
         boolean res = true;
+
         while (slow != null) {
             if (slow.val != fast.val) {
                 res = false;

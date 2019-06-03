@@ -34,7 +34,7 @@ You may assume k is always valid, 1 ≤ k ≤ array's length.
 
 ## 描述
 
-数组中第K大的数字,,时间复杂度O(nlogn)
+数组中第K大的数字,时间复杂度O(nlogn)
 
 
 

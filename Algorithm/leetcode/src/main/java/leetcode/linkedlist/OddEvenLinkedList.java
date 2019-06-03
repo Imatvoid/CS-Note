@@ -9,9 +9,9 @@ public class OddEvenLinkedList {
             return  head;
         }
 
-
         ListNode odd  = head;
         ListNode even = head.next;
+        // 这里要提前保存下
         ListNode evenHead = even;
         while (even !=null && even.next!=null){
             odd = odd.next = even.next;
