@@ -5,10 +5,6 @@ import java.util.*;
 public class ThreeSum {
 
 
-
-
-
-
     List<List<Integer>> res = new ArrayList<List<Integer>>();
     public List<List<Integer>> threeSum(int[] nums) {
 
@@ -18,7 +14,7 @@ public class ThreeSum {
             if (i > 0 && nums[i - 1] == nums[i])
                 continue;
             else {
-               twoSum(nums, -nums[i], i);
+                twoSum(nums, -nums[i], i);
             }
         }
 
@@ -29,12 +25,19 @@ public class ThreeSum {
     void twoSum(int[] nums, int target, int i) {
 
         int right = nums.length-1;
-        int b = i;
         int left =i+1;
         while(left<right){
-            if(nums[left]+nums[right] == target){
+            if(nums[left]+nums[right]<target){
+                left++;
+                continue;
+            }
+            else if(nums[left]+nums[right]>target){
+                right--;
+                continue;
+            }
+            else{
                 ArrayList<Integer> t = new ArrayList<>();
-                t.add(nums[b]);
+                t.add(nums[i]);
                 t.add(nums[left]);
                 t.add(nums[right]);
                 res.add(t);
@@ -42,16 +45,13 @@ public class ThreeSum {
                 left++;
                 right--;
                 while(left<right && nums[left] == nums[left-1]) left++;
-                while(left<right && nums[right+1] == nums[right]) right--;
-            }else{
-                if(nums[left]+nums[right] < target)
-                    left++;
-                else
-                    right--;
+                while(left<right && nums[right] == nums[right+1]) right--;
             }
         }
 
     }
+
+
 
     public List<List<Integer>> twoSumIndex(int[] nums, int target, int index) {
         List<List<Integer>> res = new ArrayList<List<Integer>>();

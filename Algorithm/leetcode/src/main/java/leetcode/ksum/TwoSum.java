@@ -43,7 +43,7 @@ public class TwoSum {
         int left=0;
         int right= nums.length-1;
 
-        while(left<=right){
+        while(left<right){
             if(sorted[left]+sorted[right]<target){
                 left++;
                 continue;
