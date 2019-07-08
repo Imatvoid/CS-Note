@@ -4,3 +4,6 @@
 [submodule "MysqlGuide"]
 	path = MysqlGuide
 	url = git@github.com:Imatvoid/MysqlGuide.git
+[submodule "Algorithm"]
+	path = Algorithm
+	url = git@github.com:Imatvoid/Algorithm.git
