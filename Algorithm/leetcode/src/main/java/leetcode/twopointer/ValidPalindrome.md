@@ -1,8 +1,0 @@
-## 125. Valid Palindrome
-
-
-
-
-
-
-
