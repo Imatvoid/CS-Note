@@ -1,3 +1,6 @@
 [submodule "Spring"]
 	path = Spring
 	url = git@github.com:Imatvoid/Spring.git
+[submodule "MysqlGuide"]
+	path = MysqlGuide
+	url = git@github.com:Imatvoid/MysqlGuide.git
