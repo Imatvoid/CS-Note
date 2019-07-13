@@ -1,4 +1,0 @@
-## ps
-
-> ps(process status)
-
