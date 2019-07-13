@@ -7,3 +7,6 @@
 [submodule "Algorithm"]
 	path = Algorithm
 	url = git@github.com:Imatvoid/Algorithm.git
+[submodule "LinuxGuide"]
+	path = LinuxGuide
+	url = git@github.com:Imatvoid/LinuxGuide.git
