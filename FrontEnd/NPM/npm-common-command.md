@@ -47,44 +47,89 @@ npm uninstall --save <package_name> 这样连依赖一起删掉
 npm uninstall -g <package_name>
 
 
-
-
 # 查看包版本信息 
 npm view module_name versions
 
 ```
-#### 
-
 
 https://www.coolecho.net/article/av51
 
-### 版本升级
+## Node版本升级
 
-```shell
-# 第一步，先查看本机node.js版本：
+第1步:先查看本机node.js版本：
+
+```
 node -v
-# 第二步，清除node.js的cache：
+```
+
+第2步:清除node.js的cache：
+
+```
 sudo npm cache clean -f
-# 第三步，安装 n 工具，这个工具是专门用来管理node.js版本的，别怀疑这个工具的名字，是他是他就是他，他的名字就是 "n"
+```
+
+第3步:安装 n 工具，这个工具是专门用来管理node.js版本的，别怀疑这个工具的名字，是他是他就是他，他的名字就是 "n"
+
+```
 sudo npm install -g n
-第四步，安装最新版本的node.js
+```
+
+第4步:安装最新版本的node.js
+
+```
+sudo n latest
+```
+
+安装稳定版本的node.js
+
+```
 sudo n stable
-第五步，再次查看本机的node.js版本：
+```
+
+安装或使用某一个版本的node.js
+
+```
+sudo n 8.9.0
+```
+
+删除某个版本的node.js
+
+```
+sudo n rm 9.0.0
+```
+
+第5步:再次查看本机的node.js版本：
+
+```
 node -v
-第六步，更新npm到最新版：
-$ sudo npm install npm@latest -g
-第七步，验证
+```
+
+第6步:更新npm到最新版
+
+```
+sudo npm install npm@latest -g
+```
+
+第七步:验证
+
+```
 node -v
 npm -v
 ```
 
-
-
-### node 4.0 新特性
+node 4.0 新特性
 
 npm config set scripts-prepend-node-path true ??
 
 
+
+## 查看配置
+
+```shell
+npm config get userconfig
+
+npm config get globalconfig
+```
 
 
 
