@@ -25,3 +25,6 @@
 [submodule "RedisGuide"]
 	path = RedisGuide
 	url = git@github.com:Imatvoid/RedisGuide.git
+[submodule "ComputerNetworks"]
+	path = ComputerNetworks
+	url = git@github.com:Imatvoid/ComputerNetworks.git
