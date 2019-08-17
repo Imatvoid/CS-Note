@@ -22,3 +22,6 @@
 [submodule "OperatingSystem"]
 	path = OperatingSystem
 	url = git@github.com:Imatvoid/OperatingSystem.git
+[submodule "RedisGuide"]
+	path = RedisGuide
+	url = git@github.com:Imatvoid/RedisGuide.git
