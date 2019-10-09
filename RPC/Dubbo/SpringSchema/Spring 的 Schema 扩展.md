@@ -1,4 +1,4 @@
-# Spring schema 扩展
+# Spring Schema 扩展
 
 ## 基本实现
 
